@@ -37,5 +37,20 @@ Board Class.
    KnuckleBones has-a Dice.  Compisition.
    KnuckleBones has-a Board. Compisition
 
+    chat            -   Possible.
+    coins           -   Wishlful.
+    first name      -   Necessary.
+    high score      -   Possible.
+    last name       -   Necessary.
+    leaderboard     -   Wishful.
+    levels          -   Wishful.
+    player stats    -   Possible.
+    score           -   Necessary.
+    streak          -   Necessary.
+    team stats      -   Wishful.
+    teams           -   Wishful.
+    userid          -   Necessary.
+    winner          -   Necessary.
+
 Ncurses Confirmation.
 
