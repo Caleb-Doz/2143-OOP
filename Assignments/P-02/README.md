@@ -32,8 +32,8 @@ Board Class.
    . Actions: Set_Value(), 
    . Relationships: Board Class is used by KnuckleBones to set the game's layout.
 
-   Game has-a Player.   Compisition.
-   KnuckleBones is-a Game.  Inheritance.
+   Game has-a Player.        Compisition.
+   KnuckleBones is-a Game.   Inheritance.
    KnuckleBones has-a Dice.  Compisition.
    KnuckleBones has-a Board. Compisition
 
