@@ -1,8 +1,7 @@
 //Caleb Dozier.
 //Pr.02: Knuckle Bones.
-//Due Date: 11/18/2024
+//Due Date: 11/18/2024.
 
-#include <iostream>
 #include <locale.h>
 #include <ncurses.h>
 
