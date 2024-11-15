@@ -11,7 +11,9 @@
 #include "grid_class.hpp"
 #include "input_class.hpp"
 #include "logger_class.hpp"
+#include <iostream>
 #include <ctime>
+#include <cstring>
 #include <string>
 #include <vector>
 
@@ -57,7 +59,7 @@ int main() {
 
     string text = "ROLL";
 
-    size = strlen(text.c_str()) + 2;
+    size = std::strlen(text.c_str()) + 2;
 
     Logger::log("vals", vector<int>({size, 3, (rows / 2), ((cols - size) / 2)}));
 
