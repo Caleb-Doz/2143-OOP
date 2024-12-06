@@ -49,8 +49,7 @@ The bundling data and the methods that operate on it within a class.
 
 ## Exception Handling
 
-the process of managing and responding to runtime errors or unusual conditions in a
-program in a structured way
+the process of managing and responding to runtime errors or unusual conditions in a program in a structured way
 
 ## File I/O in OOP
 
@@ -65,18 +64,20 @@ Classes that have access to other classes' private and protected parts.
 They are advanced programming features in Object-Oriented Programming (OOP) that enable developers to create flexible and reusable code.
 
 ## Inheritance
+
 Allows a base class to pass on traits to a child class granting a Is-A relationship
 
 ## Instance Variable
+
 An instance variable is a variable defined in a class, for which each instantiated object of the class has its own unique copy
 
 ## Member Variable
+
 A member variable is a variable that is declared inside a class and is accessible to all members (methods) of that class
 
 ## Memory Management (Garbage Collection, Pointers)
 
-In programming refers to the process of efficiently allocating, using, and deallocating 
-memory during the execution of a program
+In programming refers to the process of efficiently allocating, using, and deallocating memory during the execution of a program
 
 ## Method Overloading
 
@@ -144,4 +145,4 @@ UML Diagrams and Modeling are integral parts of Object-Oriented Design (OOD) and
 
 ## Virtual
 
-In Object-Oriented Programming (OOP), the term virtual generally refers to methods or functions that can be overridden in derived (sub) classes.
+In Object-Oriented Programming (OOP), the term virtual refers to methods or functions that can be overridden in child classes.
