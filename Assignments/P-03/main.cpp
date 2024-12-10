@@ -1,56 +1,52 @@
 #include <SFML/Graphics.hpp>
-#include <vector>
 #include <iostream>
 
 int main() {
-    // Create a window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Lesson 5: Drawing the Game Grid");
+// Create a window
+sf::RenderWindow window(sf::VideoMode(800, 600), "Knuckle Bones 02");
 
-    // Grid configuration
-    const int rows = 3;
-    const int cols = 3;
-    const float cellSize = 100.f; // Width and height of each cell
-    const float gridStartX = 200.f; // Starting X position of the grid
-    const float gridStartY = 100.f; // Starting Y position of the grid
-    const float cellSpacing = 10.f; // Spacing between cells
+    // Create a rectangle
+    sf::RectangleShape rectangle(sf::Vector2f(200.f, 100.f)); // 200x100 rectangle
+    rectangle.setFillColor(sf::Color::Blue);                  // Set the fill color
+    rectangle.setPosition(100.f, 100.f);                      // Set the position
 
-    // Vector to hold grid cells
-    std::vector<sf::RectangleShape> grid;
+    // Create a circle
+    sf::CircleShape circle(50.f); // Circle with radius 50
+    circle.setFillColor(sf::Color::Green);
+    circle.setPosition(400.f, 100.f);
 
-    // Create the grid cells
-    for (int row = 0; row < rows; ++row) {
-        for (int col = 0; col < cols; ++col) {
-            sf::RectangleShape cell(sf::Vector2f(cellSize, cellSize));
-            cell.setFillColor(sf::Color::White); // Default cell color
-            cell.setOutlineColor(sf::Color::Black);
-            cell.setOutlineThickness(2.f);
-
-            // Calculate cell position
-            float x = gridStartX + col * (cellSize + cellSpacing);
-            float y = gridStartY + row * (cellSize + cellSpacing);
-            cell.setPosition(x, y);
-
-            // Add the cell to the grid
-            grid.push_back(cell);
-        }
+    // Load a texture
+    sf::Texture texture;
+    if (!texture.loadFromFile("dice_face.png")) {
+        std::cerr << "Error: Could not load texture 'dice_face.png'\n";
+        return -1;
     }
+
+    // Create a sprite to display the texture
+    sf::Sprite sprite;
+    sprite.setTexture(texture);
+    sprite.setPosition(300.f, 300.f); // Set sprite position
 
     // Main game loop
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
+            if (event.type == sf::Event::Closed)
                 window.close();
-            }
         }
 
-        // Render
+        // Clear the window with a white background
         window.clear(sf::Color::White);
-        for (const auto& cell : grid) {
-            window.draw(cell);
-        }
+
+        // Draw the shapes and sprite
+        window.draw(rectangle);
+        window.draw(circle);
+        window.draw(sprite);
+
+        // Display the contents of the window
         window.display();
     }
 
     return 0;
+
 }
